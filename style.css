@@ -10,7 +10,7 @@ body {
   font-size: 17px;
   color: #333;
   line-height: 1.6;
-  background: #e5edef;
+  background: #fafafa;
 }
 
 /*
@@ -39,6 +39,7 @@ body {
 /*--------
 */
 .content {
+  /* border: red 2px solid; */
   position: absolute;
   z-index: 1;
   top: 30%;
@@ -217,6 +218,27 @@ body {
 
 /*
 /*--------
+/* Tablets
+/*--------
+*/
+@media (max-width: 1025px) {
+  .showcase::after {
+    height: 60vh;
+  }
+
+  .content {
+    top: 15%;
+    padding-left: 15vh;
+    padding-right: 15vh;
+  }
+
+  .blog-posts .grid-3 {
+    display: inline-block;
+  }
+}
+
+/*
+/*--------
 /* Small screens
 /*--------
 */
@@ -285,5 +307,42 @@ body {
 
   .blog-link .button {
     margin-bottom: 30px;
+  }
+}
+
+/*
+/*--------
+/* Landscape
+/*--------
+*/
+@media (max-height: 500px) {
+  .showcase::after {
+    height: 80vh;
+  }
+
+  .content {
+    top: 10%;
+    padding-left: 15vh;
+    padding-right: 15vh;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+  .grid-2 {
+    display: block;
+  }
+
+  .about-me {
+    text-align: center;
+  }
+
+  .about .about-text {
+    text-align: center;
+  }
+
+  .blog-posts .grid-3 {
+    display: block;
   }
 }
