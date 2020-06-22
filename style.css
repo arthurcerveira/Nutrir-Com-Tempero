@@ -1,4 +1,10 @@
+/*
+/*--------
+/* General
+/*--------
+*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   /* border: rebeccapurple 2px solid; */
@@ -15,12 +21,69 @@ body {
 
 /*
 /*--------
+/* Accessibility
+/*--------
+*/
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+/*
+/*--------
+/* Navigation
+/*--------
+*/
+.navigation {
+  height: 10vh;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  line-height: 10vh;
+
+  /* padding-top: 1rem; */
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding-left: 2rem;
+}
+
+.menu button {
+  border: none;
+  font-size: 17px;
+  background: #fafafa;
+}
+
+.menu button:hover {
+  cursor: pointer;
+}
+
+/*
+/*--------
 /* Landing page background
 /*--------
 */
 .showcase::after {
   content: "";
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: block;
 
@@ -169,7 +232,7 @@ body {
 .blog-posts .posts-caption {
   margin-top: -18px;
   background: #fafafa;
-  width: fit-content;
+  width: max-content;
   padding-left: 10px;
   padding-right: 10px;
   margin-left: auto;
