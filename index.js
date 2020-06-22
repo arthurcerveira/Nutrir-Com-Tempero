@@ -1,17 +1,81 @@
-// Navigation functions
+// Navigation control
+function scrollToHome() {
+  let home = document.querySelector(".showcase");
+  scrollCompensation(home);
+
+  // Close nav menu if on mobile
+  closeNavMenu();
+}
+
 function scrollToServices() {
-  let services = document.getElementsByClassName("services")[0];
-  services.scrollIntoView({ behavior: "smooth" });
+  let services = document.querySelector(".services");
+  scrollCompensation(services);
+
+  // Close nav menu if on mobile
+  closeNavMenu();
 }
 
 function scrollToAbout() {
-  let about = document.getElementsByClassName("about")[0];
-  about.scrollIntoView({ behavior: "smooth" });
+  let about = document.querySelector(".about");
+  scrollCompensation(about);
+
+  // Close nav menu if on mobile
+  closeNavMenu();
 }
 
 function scrollToBlog() {
-  let blog = document.getElementsByClassName("blog")[0];
-  blog.scrollIntoView({ behavior: "smooth" });
+  let blog = document.querySelector(".blog");
+  scrollCompensation(blog);
+
+  // Close nav menu if on mobile
+  closeNavMenu();
+}
+
+function scrollCompensation(element) {
+  // Get navigation bar height
+  let yOffset = document.querySelector(".navigation").clientHeight;
+
+  let position = element.style.position;
+  let top = element.style.top;
+
+  // Workaround to fit navigation bar
+  element.style.position = "relative";
+  element.style.top = `-${yOffset}px`;
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  // Revert back to normal
+  element.style.top = top;
+  element.style.position = position;
+}
+
+// Modify navbar background based on scroll
+function setNavbarClass() {
+  let nav = document.querySelector(".navigation");
+
+  window.pageYOffset > 100
+    ? nav.classList.add("navigation-scroll")
+    : nav.classList.remove("navigation-scroll");
+}
+
+window.addEventListener("scroll", setNavbarClass);
+
+// Navbar menu for mobile users
+function toggleNavMenu() {
+  let navMenuButton = document.querySelector(".menu");
+
+  navMenuButton.classList.contains("show")
+    ? navMenuButton.classList.remove("show")
+    : navMenuButton.classList.add("show");
+}
+
+window.onload = () =>
+  document
+    .querySelector(".nav-button")
+    .addEventListener("click", toggleNavMenu);
+
+function closeNavMenu() {
+  let navMenuButton = document.querySelector(".menu");
+  navMenuButton.classList.remove("show");
 }
 
 // Accessibility
