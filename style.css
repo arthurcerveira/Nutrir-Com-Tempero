@@ -311,7 +311,84 @@ ul li {
 
 .blog-link .button:hover {
   border: #b6ccd2 1px solid;
-  background-color: #b6ccd2;
+}
+
+/*
+/*--------
+/* Contact
+/*--------
+*/
+.contact {
+  background: #9684be;
+}
+
+.contact-label {
+  padding-left: 4rem;
+  padding-bottom: 1rem;
+  font-size: 24px;
+}
+
+.contact-form {
+  display: block;
+  text-align: center;
+  /* border: red 2px solid; */
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+}
+
+.form-label {
+  /* display: block; */
+  line-height: 2;
+  float: left;
+  padding-left: 1rem;
+}
+
+.form-input {
+  display: block;
+  margin: auto;
+  width: 100%;
+  line-height: 2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.submit {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 20px;
+  border: #333 1px solid;
+  border-radius: 10px;
+  background-color: inherit;
+  margin: auto;
+}
+
+.submit:hover {
+  cursor: pointer;
+  border: #b6ccd2 1px solid;
 }
 
 /*
@@ -346,12 +423,21 @@ ul li {
 */
 @media (max-width: 560px) {
   .navigation {
-    padding-top: 10px;
+    padding: 10px 4rem;
+    height: max-content;
+    /* border: red 2px solid; */
+  }
+
+  i {
+    margin-top: 0px;
+    padding-top: 0px;
   }
 
   .nav-button {
     margin-top: 0px;
+    padding-top: 0px;
     display: block;
+    /* border: red 2px solid; */
   }
 
   .main-nav ul.menu {
@@ -377,6 +463,19 @@ ul li {
     border-bottom: #ccc solid 1px;
     font-size: 14px;
     text-align: center;
+  }
+
+  .dark-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    transition: background-color 250ms;
+  }
+
+  .dark-overlay-on {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* position: fixed; */
   }
 
   .main-nav ul.menu.show {
@@ -455,6 +554,16 @@ ul li {
 
   .blog-link .button {
     margin-bottom: 30px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-label {
+    padding: 0;
+    width: max-content;
+    margin: auto;
   }
 }
 

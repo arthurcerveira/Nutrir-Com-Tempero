@@ -31,6 +31,14 @@ function scrollToBlog() {
   closeNavMenu();
 }
 
+function scrollToContact() {
+  let contact = document.querySelector(".contact");
+  scrollCompensation(contact);
+
+  // Close nav menu if on mobile
+  closeNavMenu();
+}
+
 function scrollCompensation(element) {
   // Get navigation bar height
   let yOffset = document.querySelector(".navigation").clientHeight;
@@ -66,6 +74,11 @@ function toggleNavMenu() {
   navMenuButton.classList.contains("show")
     ? navMenuButton.classList.remove("show")
     : navMenuButton.classList.add("show");
+
+  let darkOverlay = document.querySelector(".dark-overlay");
+  darkOverlay.classList.contains("dark-overlay-on")
+    ? darkOverlay.classList.remove("dark-overlay-on")
+    : darkOverlay.classList.add("dark-overlay-on");
 }
 
 window.onload = () =>
@@ -76,6 +89,9 @@ window.onload = () =>
 function closeNavMenu() {
   let navMenuButton = document.querySelector(".menu");
   navMenuButton.classList.remove("show");
+
+  let darkOverlay = document.querySelector(".dark-overlay");
+  darkOverlay.classList.remove("dark-overlay-on");
 }
 
 // Accessibility

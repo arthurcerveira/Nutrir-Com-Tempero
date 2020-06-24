@@ -20,9 +20,10 @@
     <div class="navigation">
       <nav class="main-nav">
         <button class="logo" onclick="scrollToHome()">
-          <h2>Nutricionista Luciana Cerveira</h2>
+          <h2>Nutrir com Tempero</h2>
         </button>
         <ul class="menu">
+          <li><button onclick="scrollToHome()">Home</button></li>
           <li><button onclick="scrollToServices()">Serviços</button></li>
           <li><button onclick="scrollToAbout()">Sobre mim</button></li>
           <li><button onclick="scrollToBlog()">Blog</button></li>
@@ -34,6 +35,8 @@
         <i class="fas fa-bars fa-2x"></i>
       </div>
     </div>
+
+    <div class="dark-overlay"></div>
 
     <!-- Landing Page -->
     <header class="showcase center">
@@ -140,6 +143,43 @@
     </section>
 
     <!-- Contact -->
+    <section class="contact">
+      <div class="container">
+        <h3 class="contact-label">Entre em contato</h3>
+
+        <form>
+          <div class="contact-form">
+            <label for="name" class="form-label">Nome</label>
+            <input
+              type="text"
+              class="name form-input"
+              name="firstname"
+              placeholder="Seu nome"
+            />
+          </div>
+          <div class="contact-form">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="text"
+              class="email form-input"
+              name="email"
+              placeholder="Seu email"
+            />
+          </div>
+          <div class="contact-form">
+            <label for="subject" class="form-label">Mensagem</label>
+            <textarea
+              class="subject form-input"
+              name="subject "
+              placeholder="Escreva sua mensagem"
+            ></textarea>
+          </div>
+          <div class="contact-form">
+            <input type="submit" class="submit" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </section>
 
     <!-- Footer -->
   </body>
