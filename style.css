@@ -428,6 +428,10 @@ textarea::-webkit-scrollbar-thumb {
     /* border: red 2px solid; */
   }
 
+  .main-nav {
+    margin-top: 1%;
+  }
+
   i {
     margin-top: 0px;
     padding-top: 0px;
@@ -436,8 +440,9 @@ textarea::-webkit-scrollbar-thumb {
   .nav-button {
     margin-top: 0px;
     padding-top: 0px;
-    display: block;
+    display: flex;
     /* border: red 2px solid; */
+    position: fixed;
   }
 
   .main-nav ul.menu {
@@ -487,7 +492,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 
   .showcase::after {
-    height: 60vh;
+    height: 70vh;
   }
 
   .content {
