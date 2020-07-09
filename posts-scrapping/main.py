@@ -1,6 +1,6 @@
 import unicodedata
 
-from flask import Flask
+from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,7 +15,7 @@ def scrap_posts():
     soup = BeautifulSoup(page.content, 'html.parser')
     posts = soup.find_all('article', class_='post')
 
-    response = dict()
+    post_json = dict()
 
     # Get the first three posts
     for post_index in range(3):
@@ -27,9 +27,12 @@ def scrap_posts():
         img = post.find('img')['src']
         link = post.find('a')['href']
 
-        response[f'post{post_index}'] = {'title': title,
-                                         'img': img,
-                                         'link': link}
+        post_json[f'post{post_index}'] = {'title': title,
+                                          'img': img,
+                                          'link': link}
+
+    response = jsonify(post_json)
+    response.headers.add('Access-Control-Allow-Origin', '*')
 
     return response
 
