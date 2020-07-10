@@ -209,25 +209,6 @@ ul li {
 
 /*
 /*--------
-/* Services
-/*--------
-*/
-.services {
-  background-color: #fafafa;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.services .service {
-  text-align: center;
-}
-
-.service h3 {
-  padding: 8px;
-}
-
-/*
-/*--------
 /* About
 /*--------
 */

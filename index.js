@@ -1,3 +1,6 @@
+const postsEndPoint = "https://nutrir-com-tempero.rj.r.appspot.com/scrap_posts";
+const contactEndPoint = "https://arthur-email-bot.herokuapp.com/contact";
+
 // Navigation control
 function scrollToHome() {
   let home = document.querySelector(".showcase");
@@ -119,3 +122,35 @@ function setPostImageHeight() {
 
 window.addEventListener("load", setPostImageHeight);
 window.addEventListener("resize", setPostImageHeight);
+
+// Get blog posts from Wordpress
+function getPosts() {
+  fetch(postsEndPoint)
+    .then((response) => response.json())
+    .then((posts) => {
+      let firstImage = document.querySelector(".first-image");
+      firstImage.src = posts.post0.img;
+      let firstLink = document.querySelector(".first-link");
+      firstLink.href = posts.post0.link;
+      let firstTitle = document.querySelector(".first-title");
+      firstTitle.innerHTML = posts.post0.title;
+
+      let secondImage = document.querySelector(".second-image");
+      secondImage.src = posts.post1.img;
+      let secondLink = document.querySelector(".second-link");
+      secondLink.href = posts.post1.link;
+      let secondTitle = document.querySelector(".second-title");
+      secondTitle.innerHTML = posts.post1.title;
+
+      let thirdImage = document.querySelector(".third-image");
+      thirdImage.src = posts.post2.img;
+      let thirdLink = document.querySelector(".third-link");
+      thirdLink.href = posts.post2.link;
+      let thirdTitle = document.querySelector(".third-title");
+      thirdTitle.innerHTML = posts.post2.title;
+
+      setPostImageHeight();
+    });
+}
+
+getPosts();
