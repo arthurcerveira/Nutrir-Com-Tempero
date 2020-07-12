@@ -1,5 +1,6 @@
 const postsEndPoint = "https://nutrir-com-tempero.rj.r.appspot.com/scrap_posts";
-const contactEndPoint = "https://arthur-email-bot.herokuapp.com/contact";
+const contactEndPoint =
+  "https://cors-anywhere.herokuapp.com/https://arthur-email-bot.herokuapp.com/contact";
 
 // Navigation control
 function scrollToHome() {
@@ -178,7 +179,7 @@ function sendMessage(event) {
     return;
   }
 
-  data = { name: name, email: email, subject: subject };
+  let data = { name: name, email: email, text: subject };
 
   fetch(contactEndPoint, {
     method: "POST",
@@ -189,7 +190,17 @@ function sendMessage(event) {
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      if (data.message) {
+        setContactFeedback("Mensagem enviada com sucesso");
+        return;
+      }
+
+      if (data.error) {
+        setContactFeedback("Houve um erro ao enviar a mensagem");
+        return;
+      }
+    });
 }
 
 window.addEventListener("load", () =>
