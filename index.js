@@ -154,3 +154,62 @@ function getPosts() {
 }
 
 getPosts();
+
+// Send message through contact form
+function sendMessage(event) {
+  event.preventDefault();
+  setContactFeedback("");
+
+  let name = document.querySelector(".name").value;
+
+  if (name == "") {
+    setContactFeedback("Campo 'Nome' não pode estar em branco");
+    return;
+  }
+
+  let email = document.querySelector(".email").value;
+
+  if (!validateEmail(email)) return;
+
+  let subject = document.querySelector(".subject").value;
+
+  if (subject == "") {
+    setContactFeedback("Campo  'Mensagem' não pode estar em branco");
+    return;
+  }
+
+  data = { name: name, email: email, subject: subject };
+
+  fetch(contactEndPoint, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+
+window.addEventListener("load", () =>
+  document.querySelector(".submit-form").addEventListener("click", sendMessage)
+);
+
+function validateEmail(email) {
+  if (email == "") {
+    setContactFeedback("Campo 'Email' não pode estar em branco");
+    return false;
+  }
+
+  let re = /\S+@\S+\.\S+/;
+
+  if (re.test(email)) return true;
+
+  setContactFeedback("Formato de email inválido");
+  return false;
+}
+
+function setContactFeedback(message) {
+  document.querySelector(".feedback").innerHTML = message;
+}

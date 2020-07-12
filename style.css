@@ -304,7 +304,8 @@ ul li {
 }
 
 .contact-label {
-  padding-left: 4rem;
+  /* padding-left: 4rem; */
+  text-align: center;
   padding-bottom: 1rem;
   font-size: 24px;
 }
@@ -355,7 +356,12 @@ textarea::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-.submit {
+.feedback {
+  font-weight: bold;
+  text-align: center;
+}
+
+.submit-form {
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 500;
@@ -367,7 +373,7 @@ textarea::-webkit-scrollbar-thumb {
   margin: auto;
 }
 
-.submit:hover {
+.submit-form:hover {
   cursor: pointer;
   border: #b6ccd2 1px solid;
 }
