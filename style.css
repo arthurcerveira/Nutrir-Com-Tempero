@@ -140,9 +140,12 @@ ul li {
   /* border: red 2px solid; */
   position: absolute;
   z-index: 1;
-  top: 25%;
+  /* top: 30%; */
   padding-left: 50vh;
   padding-right: 50vh;
+  top: 50%;
+  /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 
 .content h1 {
@@ -487,7 +490,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 
   .content {
-    top: 15%;
+    top: 20%;
     margin-top: 0;
     padding-left: 5vh;
     padding-right: 5vh;
