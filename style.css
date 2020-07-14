@@ -140,12 +140,9 @@ ul li {
   /* border: red 2px solid; */
   position: absolute;
   z-index: 1;
-  /* top: 30%; */
+  top: 35vh;
   padding-left: 50vh;
   padding-right: 50vh;
-  top: 50%;
-  /* -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
 }
 
 .content h1 {
@@ -385,6 +382,60 @@ textarea::-webkit-scrollbar-thumb {
 
 /*
 /*--------
+/* Find me
+/*--------
+*/
+.find-me {
+  background: #fafafa;
+}
+.map {
+  height: 40vh;
+  width: 80%;
+  /* background-color: grey; */
+}
+.find-me-text {
+  /* margin-left: 2rem; */
+  font-size: 24px;
+}
+
+.social-media-list {
+  height: 100%;
+  /* margin-left: 2rem; */
+}
+
+.social-media-item {
+  padding: 0;
+  padding-top: 5%;
+  line-height: 40px;
+  font-size: 30px;
+  /* border: 3px solid green; */
+}
+
+.social-media {
+  font-size: 24px;
+  margin: 20px;
+  /* vertical-align: middle; */
+}
+
+/*
+/*--------
+/* Footer
+/*--------
+*/
+.footer {
+  color: #f4f4f4;
+  background-color: #333;
+  padding: 12px;
+}
+
+@media (max-width: 1600px) {
+  .content {
+    top: 28vh;
+  }
+}
+
+/*
+/*--------
 /* Tablets
 /*--------
 */
@@ -405,6 +456,12 @@ textarea::-webkit-scrollbar-thumb {
 
   .blog-posts .post:last-child {
     display: none;
+  }
+
+  .map {
+    height: 25vh;
+    width: 90%;
+    padding-top: 2rem;
   }
 }
 
@@ -563,6 +620,35 @@ textarea::-webkit-scrollbar-thumb {
     padding: 0;
     width: max-content;
     margin: auto;
+  }
+
+  .map {
+    height: 40vh;
+    width: 90%;
+    padding-top: 2rem;
+  }
+
+  .find-me-text {
+    padding-top: 2rem;
+    margin-left: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .social-media {
+    font-size: 20px;
+    margin: 20px;
+    /* vertical-align: middle; */
+  }
+
+  .social-media-list {
+    height: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 1rem;
   }
 }
 

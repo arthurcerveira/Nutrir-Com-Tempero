@@ -224,3 +224,16 @@ function validateEmail(email) {
 function setContactFeedback(message) {
   document.querySelector(".feedback").innerHTML = message;
 }
+
+// Initialize map
+function initMap() {
+  let location = { lat: -31.328614, lng: -54.101968 };
+  let map = new google.maps.Map(document.querySelector(".map"), {
+    zoom: 14,
+    center: location,
+  });
+
+  const marker = new google.maps.Marker({ position: location, map: map });
+}
+
+window.addEventListener("load", () => initMap());
