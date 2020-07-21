@@ -228,8 +228,8 @@ ul li {
 }
 
 .about .img-about {
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
   /* margin-left: 7rem; */
   border-radius: 50%;
 }
@@ -443,6 +443,13 @@ textarea::-webkit-scrollbar-thumb {
 @media (max-width: 1600px) {
   .content {
     top: 21vh;
+  }
+
+  .about .img-about {
+    width: 60%;
+    height: 60%;
+    /* margin-left: 7rem; */
+    border-radius: 50%;
   }
 }
 
