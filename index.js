@@ -60,6 +60,53 @@ function scrollCompensation(element) {
   element.style.position = position;
 }
 
+// Highlight which section the user is in
+function highlightMenuSection() {
+  // Get navigation bar height
+  let yOffset = document.querySelector(".navigation").clientHeight + 5;
+
+  let aboutSection = document.querySelector(".about");
+  let blogSection = document.querySelector(".blog");
+  let contactSection = document.querySelector(".contact");
+  let findMeSection = document.querySelector(".find-me");
+
+  let homeMenu = document.querySelector(".menu-home");
+  let aboutMenu = document.querySelector(".menu-about");
+  let blogMenu = document.querySelector(".menu-blog");
+  let contactMenu = document.querySelector(".menu-contact");
+
+  if (window.pageYOffset <= aboutSection.offsetTop - yOffset) {
+    highlightItem(homeMenu);
+    return;
+  }
+
+  if (window.pageYOffset <= blogSection.offsetTop - yOffset) {
+    highlightItem(aboutMenu);
+    return;
+  }
+
+  if (window.pageYOffset <= contactSection.offsetTop - yOffset) {
+    highlightItem(blogMenu);
+    return;
+  }
+
+  if (window.pageYOffset <= findMeSection.offsetTop - yOffset) {
+    highlightItem(contactMenu);
+    return;
+  }
+}
+
+function highlightItem(element) {
+  let menu = document.querySelectorAll(".menu-button");
+
+  menu.forEach((menuElement) => {
+    return menuElement.classList.remove("menu-button-selected");
+  });
+  element.classList.add("menu-button-selected");
+}
+
+window.addEventListener("scroll", highlightMenuSection);
+
 // Modify navbar background based on scroll
 function setNavbarClass() {
   let nav = document.querySelector(".navigation");
