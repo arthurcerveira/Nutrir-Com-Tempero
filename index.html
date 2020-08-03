@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <script type="text/javascript" src="./index.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
@@ -25,10 +25,32 @@
           <img src="./assests/nutrir-com-tempero.png" alt="" class="img-logo" />
         </button>
         <ul class="menu">
-          <li><button onclick="scrollToHome()" class="menu-button menu-home menu-button-selected">Home</button></li>
-          <li><button onclick="scrollToAbout()" class="menu-button menu-about">Sobre mim</button></li>
-          <li><button onclick="scrollToBlog()" class="menu-button menu-blog">Blog</button></li>
-          <li><button onclick="scrollToContact()" class="menu-button menu-contact">Contato</button></li>
+          <li>
+            <button
+              onclick="scrollToHome()"
+              class="menu-button menu-home menu-button-selected"
+            >
+              Home
+            </button>
+          </li>
+          <li>
+            <button onclick="scrollToAbout()" class="menu-button menu-about">
+              Sobre mim
+            </button>
+          </li>
+          <li>
+            <button onclick="scrollToBlog()" class="menu-button menu-blog">
+              Blog
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="scrollToContact()"
+              class="menu-button menu-contact"
+            >
+              Contato
+            </button>
+          </li>
         </ul>
       </nav>
 
@@ -116,7 +138,11 @@
             </div>
           </div>
           <div class="blog-link">
-            <a href="#" class="button blog-button">Leia mais »</a>
+            <a
+              href="https://nutrircomtempero.wordpress.com/"
+              class="button blog-button"
+              >Leia mais »</a
+            >
           </div>
         </div>
       </div>
@@ -170,12 +196,13 @@
         <div class="grid-2">
           <div class="map center">
           </div>
-          <div class="center">
-            <h3 class="find-me-text">Me siga nas redes sociais</h3>
+          <div class="other-contact center">
+            <h3 class="find-me-text">Onde me encontrar</h3>
             <ul class="social-media-list">
               <li class="social-media-item"><i class="fab fa-instagram fa-1x"></i><span class="social-media">@nutrilucianacerveira</span></li>
-              <li class="social-media-item"><i class="fab fa-facebook fa-1x"></i><span class="social-media">@nutrilucianacerveira</span></li>
-              <li class="social-media-item"><i class="fab fa-twitter fa-1x"></i><span class="social-media">@nutrilucianacerveira</span></li>
+              <li class="social-media-item"><i class="fab fa-facebook fa-1x"></i><span class="social-media">/nutricionistalucianacerveira</span></li>
+              <li class="social-media-item"><i class="far fa-envelope fa-1x"></i><span class="social-media">lucerveiranutrir@gmail.com </span></li>
+              <li class="social-media-item"><i class="fas fa-phone fa-1x"></i><span class="social-media">(53) 99942-9898 </span></li>
 
             </ul>
             </p>
@@ -189,9 +216,10 @@
       <p>Arthur Cerveira &copy; 2020</p>
     </footer>
 
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwn-nfoPEjruX4NMKwEhPXK8q22FL7KkQ&callback=initMap">
-    </script>    
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwn-nfoPEjruX4NMKwEhPXK8q22FL7KkQ&callback=initMap"
+    ></script>
   </body>
-  
 </html>

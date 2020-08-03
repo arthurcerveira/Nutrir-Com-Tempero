@@ -306,6 +306,10 @@ ul li {
   background-color: #705397;
 }
 
+.blog-button:hover {
+  background-color: #9582ad;
+}
+
 /*
 /*--------
 /* Contact
@@ -373,7 +377,7 @@ textarea::-webkit-scrollbar-thumb {
 .subject {
   /* line-height: 80px; */
   font-family: inherit;
-  font-size: inherit;
+  font-size: 16px;
 }
 
 .feedback {
@@ -398,9 +402,15 @@ textarea::-webkit-scrollbar-thumb {
 }
 .map {
   height: 40vh;
-  width: 80%;
+  width: 100%;
   /* background-color: grey; */
 }
+
+.other-contact {
+  margin-left: 6rem;
+  text-align: left;
+}
+
 .find-me-text {
   font-size: 25px;
   padding-bottom: 1rem;
@@ -415,7 +425,7 @@ textarea::-webkit-scrollbar-thumb {
 
 .social-media-item {
   padding: 0;
-  padding-top: 5%;
+  padding-top: 3%;
   line-height: 40px;
   font-size: 25px;
   /* border: 3px solid green; */
@@ -706,16 +716,29 @@ textarea::-webkit-scrollbar-thumb {
     margin: auto;
   }
 
+  .submit-form {
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    margin-top: 2rem;
+  }
+
   .map {
     height: 40vh;
     width: 90%;
     padding-top: 2rem;
   }
 
+  .other-contact {
+    margin-left: 0;
+    text-align: center;
+    margin: auto;
+  }
+
   .find-me-text {
     padding-top: 2rem;
     margin-left: 0;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -729,11 +752,12 @@ textarea::-webkit-scrollbar-thumb {
     height: 100%;
     margin-left: 0;
     text-align: center;
+    padding-bottom: 1rem;
   }
 
-  .footer {
+  /* .footer {
     margin-top: 1rem;
-  }
+  } */
 }
 
 /*

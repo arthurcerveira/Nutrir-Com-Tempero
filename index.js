@@ -206,7 +206,7 @@ getPosts();
 // Send message through contact form
 function sendMessage(event) {
   event.preventDefault();
-  setContactFeedback("");
+  setContactFeedback("Enviando...");
 
   let name = document.querySelector(".name").value;
 
@@ -247,6 +247,11 @@ function sendMessage(event) {
         setContactFeedback("Houve um erro ao enviar a mensagem");
         return;
       }
+    })
+    .catch((error) => {
+      console.log(error);
+      setContactFeedback("Houve um erro ao enviar a mensagem");
+      return;
     });
 }
 
