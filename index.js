@@ -201,7 +201,7 @@ function getPosts() {
     });
 }
 
-getPosts();
+window.addEventListener("load", () => getPosts());
 
 // Send message through contact form
 function sendMessage(event) {
