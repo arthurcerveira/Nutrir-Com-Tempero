@@ -402,7 +402,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 .map {
   height: 40vh;
-  width: 100%;
+  width: 80%;
   /* background-color: grey; */
 }
 
@@ -519,11 +519,11 @@ textarea::-webkit-scrollbar-thumb {
     height: 60vh;
   }
 
-  .content {
+  /* .content {
     top: 15%;
     padding-left: 15vh;
     padding-right: 15vh;
-  }
+  } */
 
   .blog-posts .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -537,6 +537,18 @@ textarea::-webkit-scrollbar-thumb {
     height: 25vh;
     width: 90%;
     padding-top: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    top: 15%;
+    padding-left: 30vw;
+    padding-right: 15vw;
+  }
+
+  .content .text {
+    display: none;
   }
 }
 
@@ -634,26 +646,32 @@ textarea::-webkit-scrollbar-thumb {
   }
 
   .showcase::after {
-    height: 70vh;
+    height: 75vh;
   }
 
   .content {
+    /* border: rebeccapurple 2px solid; */
     top: 20%;
     margin-top: 0;
-    padding-left: 5vh;
-    padding-right: 5vh;
+    padding-left: 10vh;
+    padding-right: 1vh;
     text-align: center;
   }
 
   .content h1 {
-    text-align: center;
+    /* text-align: center; */
+    /* border: red 2px solid; */
+    padding-left: 9vw;
 
-    font-size: 2rem;
+    font-size: 10vw;
     margin-bottom: 40px;
   }
 
   .content .button {
     margin-top: 20px;
+    font-size: 5vw;
+
+    left: 0;
   }
 
   .content .text {
@@ -743,7 +761,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 
   .social-media {
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px;
     /* vertical-align: middle; */
   }
