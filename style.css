@@ -519,11 +519,20 @@ textarea::-webkit-scrollbar-thumb {
     height: 60vh;
   }
 
-  /* .content {
+  .img-logo {
+    height: 10vh;
+    width: 11vh;
+    object-fit: cover;
+    object-position: 0% 0;
+    padding-top: 10px;
+    /* margin-right: 15vw; */
+  }
+
+  .content {
     top: 15%;
-    padding-left: 15vh;
-    padding-right: 15vh;
-  } */
+    padding-left: 40vw;
+    padding-right: 5vw;
+  }
 
   .blog-posts .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -542,13 +551,45 @@ textarea::-webkit-scrollbar-thumb {
 
 @media (max-width: 800px) {
   .content {
+    /* border: red 2px solid; */
+
     top: 15%;
-    padding-left: 30vw;
-    padding-right: 15vw;
+    padding-left: 40vw;
+    padding-right: 5vw;
+  }
+
+  .showcase::after {
+    height: 65vh;
+  }
+
+  .content h1 {
+    margin-bottom: 4rem;
   }
 
   .content .text {
     display: none;
+  }
+
+  .img-logo {
+    height: 10vh;
+    width: 10.5vh;
+    object-fit: cover;
+    object-position: 0% 0;
+    padding-top: 10px;
+    margin-right: 10vw;
+  }
+  .menu {
+    margin-left: 10vw;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .social-media {
+    font-size: 15px;
+    margin: 20px;
+    /* vertical-align: middle; */
   }
 }
 
@@ -567,6 +608,7 @@ textarea::-webkit-scrollbar-thumb {
 
   .main-nav {
     margin-top: 1%;
+    justify-content: space-between;
   }
 
   i {
@@ -594,6 +636,7 @@ textarea::-webkit-scrollbar-thumb {
     height: 100%;
     border-right: #ccc 1px solid;
     padding: 30px;
+    margin-left: 0vw;
 
     z-index: 50;
     opacity: 0.95;
@@ -638,6 +681,7 @@ textarea::-webkit-scrollbar-thumb {
   }
 
   .img-logo {
+    margin-right: 0;
     height: 10vh;
     width: 10.5vh;
     object-fit: cover;
@@ -647,21 +691,22 @@ textarea::-webkit-scrollbar-thumb {
 
   .showcase::after {
     height: 75vh;
+    filter: blur(1px);
   }
 
   .content {
     /* border: rebeccapurple 2px solid; */
     top: 20%;
     margin-top: 0;
-    padding-left: 10vh;
-    padding-right: 1vh;
+    padding-left: 24vw;
+    padding-right: 1vw;
     text-align: center;
   }
 
   .content h1 {
     /* text-align: center; */
     /* border: red 2px solid; */
-    padding-left: 9vw;
+    padding-left: 8vw;
 
     font-size: 10vw;
     margin-bottom: 40px;
