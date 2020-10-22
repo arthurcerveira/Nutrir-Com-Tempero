@@ -168,24 +168,19 @@ function setPostImageHeight() {
   }
 }
 
-// const firstPostImage = document.querySelector(".first-image");
-// firstPostImage.onload = setPostImageHeight
-
 window.addEventListener("load", setPostImageHeight);
 window.addEventListener("resize", setPostImageHeight);
 
-// Get blog posts from Wordpress
-function imageFallback() {
+function fixImageSize() {
   let image = document.querySelector(".first-image");
-  if (!image.complete) image.src = "./assests/post-img-1.jpg";
 
-  image = document.querySelector(".second-image");
-  if (!image.complete) image.src = "./assests/post-img-2.jpg";
-
-  image = document.querySelector(".third-image");
-  if (!image.complete) image.src = "./assests/post-img-3.jpg";
+  if (image.style.height === "0px") {
+    image.style.height = "200px";
+    setPostImageHeight()
+  }
 }
 
+// Get blog posts from Wordpress
 function getPosts() {
   fetch(postsEndPoint)
     .then((response) => response.json())
@@ -212,13 +207,11 @@ function getPosts() {
       thirdTitle.innerHTML = posts.post2.title;
 
       setPostImageHeight();
-    })
-    .catch(() => imageFallback());
+    });
 }
 
 window.addEventListener("load", () => getPosts());
-
-window.addEventListener("load", () => imageFallback())
+window.addEventListener("scroll", () => fixImageSize())
 
 // Send message through contact form
 function sendMessage(event) {
