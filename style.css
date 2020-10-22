@@ -749,6 +749,10 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 50%;
   }
 
+  .about-me-section {
+    margin: 0 3vw;
+  }
+
   .about-me {
     text-align: center;
   }
