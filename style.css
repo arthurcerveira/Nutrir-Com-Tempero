@@ -244,7 +244,7 @@ ul li {
 .about .about-me {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-size: 8rem;
+  font-size: 1.5rem;
 }
 
 .about-text {
@@ -269,7 +269,7 @@ ul li {
 }
 
 .blog-posts .posts-caption {
-  font-size: 25px;
+  font-size: 1.5rem;
   margin-top: -18px;
   background: #fafafa;
   width: max-content;
@@ -328,7 +328,7 @@ ul li {
   text-align: center;
   font-weight: bold;
   padding-bottom: 1rem;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .contact-form {
@@ -416,7 +416,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .find-me-text {
-  font-size: 25px;
+  font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 
