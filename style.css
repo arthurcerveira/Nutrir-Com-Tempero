@@ -111,7 +111,6 @@ ul li {
   border: none;
   font-size: 17px;
   background: inherit;
-  /* font-weight: lighter; */
 }
 
 .menu-button:hover {
@@ -121,6 +120,10 @@ ul li {
 .menu-button-selected {
   color: #333;
   font-weight: 500;
+}
+
+.bar-icon {
+  height: 2em;
 }
 
 /*
@@ -230,21 +233,22 @@ ul li {
 */
 .about {
   background-color: #acbe84;
-  /* background-color: #90b34a; */
-  font-size: 19px;
 }
 
 .about .img-about {
   width: 55%;
   height: 55%;
-  /* margin-left: 7rem; */
   border-radius: 50%;
 }
 
 .about .about-me {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-size: 25px;
+  font-size: 8rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
 }
 
 /*
@@ -414,13 +418,20 @@ textarea::-webkit-scrollbar-thumb {
 .find-me-text {
   font-size: 25px;
   padding-bottom: 1rem;
-  /* margin-left: 2rem; */
-  /* font-size: 24px; */
+}
+
+.media-icon {
+  height: 2rem;
+  pointer-events: none;
+}
+
+.media-link {
+  text-decoration: inherit;
+  color: inherit;
 }
 
 .social-media-list {
   height: 100%;
-  /* margin-left: 2rem; */
 }
 
 .social-media-item {
@@ -428,13 +439,11 @@ textarea::-webkit-scrollbar-thumb {
   padding-top: 3%;
   line-height: 40px;
   font-size: 25px;
-  /* border: 3px solid green; */
 }
 
 .social-media {
   font-size: 20px;
   margin: 20px;
-  /* vertical-align: middle; */
 }
 
 /*
@@ -546,6 +555,10 @@ textarea::-webkit-scrollbar-thumb {
     height: 25vh;
     width: 90%;
     padding-top: 2rem;
+  }
+
+  .media-icon {
+    height: 1em;
   }
 }
 
@@ -809,17 +822,23 @@ textarea::-webkit-scrollbar-thumb {
     text-align: center;
   }
 
+  .media-icon {
+    height: 2.3rem;
+  }
+
   .social-media {
     font-size: 18px;
     margin: 20px;
-    /* vertical-align: middle; */
+    display: none;
   }
 
   .social-media-list {
     height: 100%;
     margin-left: 0;
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 1rem 3rem;
+    justify-content: space-between;
+    display: flex;
   }
 
   /* .footer {
