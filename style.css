@@ -19,6 +19,11 @@ body {
   background: #e2e7d8;
 }
 
+.link {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 /*
 /*--------
 /* Accessibility

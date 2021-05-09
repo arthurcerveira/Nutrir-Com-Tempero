@@ -299,3 +299,13 @@ function initMap() {
 }
 
 window.addEventListener("load", () => initMap());
+
+function setFooterText() {
+  const currentYear = new Date().getFullYear();
+
+  const footerText = `Nutrir Com Tempero &copy; ${currentYear}`
+
+  document.querySelector(".footer-text").innerHTML = footerText;
+}
+
+window.addEventListener("load", () => setFooterText());
